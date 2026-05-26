@@ -23,10 +23,11 @@ export class FileSystemAdapter implements DataAdapter
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [`append(normalizedPath, data, options)`](FileSystemAdapter/append) |  |  |
+|  [`appendBinary(normalizedPath, data, options)`](FileSystemAdapter/appendBinary) |  |  1.12.3 |
 |  [`copy(normalizedPath, normalizedNewPath)`](FileSystemAdapter/copy) |  |  |
 |  [`exists(normalizedPath, sensitive)`](FileSystemAdapter/exists) |  |  |
 |  [`getBasePath()`](FileSystemAdapter/getBasePath) |  |  |
-|  [`getFilePath(normalizedPath)`](FileSystemAdapter/getFilePath) |  | Returns the file:// path of this file |
+|  [`getFilePath(normalizedPath)`](FileSystemAdapter/getFilePath) |  | <p>Returns the file:// path of this file</p><p> 0.14.3</p> |
 |  [`getFullPath(normalizedPath)`](FileSystemAdapter/getFullPath) |  |  |
 |  [`getName()`](FileSystemAdapter/getName) |  |  |
 |  [`getResourcePath(normalizedPath)`](FileSystemAdapter/getResourcePath) |  |  |
@@ -40,7 +41,7 @@ export class FileSystemAdapter implements DataAdapter
 |  [`remove(normalizedPath)`](FileSystemAdapter/remove) |  |  |
 |  [`rename(normalizedPath, normalizedNewPath)`](FileSystemAdapter/rename) |  |  |
 |  [`rmdir(normalizedPath, recursive)`](FileSystemAdapter/rmdir) |  |  |
-|  [`stat(normalizedPath)`](FileSystemAdapter/stat) |  |  |
+|  [`stat(normalizedPath)`](FileSystemAdapter/stat) |  |  0.12.2 |
 |  [`trashLocal(normalizedPath)`](FileSystemAdapter/trashLocal) |  |  |
 |  [`trashSystem(normalizedPath)`](FileSystemAdapter/trashSystem) |  |  |
 |  [`write(normalizedPath, data, options)`](FileSystemAdapter/write) |  |  |
