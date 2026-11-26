@@ -96,7 +96,7 @@ export default class MyPlugin extends Plugin {
       name: "Example",
       icon: 'lucide-graduation-cap',
       factory: (controller, containerEl) => {
-        new MyBasesView(controller, containerEl)
+        return new MyBasesView(controller, containerEl)
       },
       options: () => ([
         {
@@ -166,7 +166,7 @@ export class MyBasesView extends BasesView implements HoverParent {
   
             // Skip rendering properties which have an empty value.
             // The list items for each file may have differing length.
-            if (value.isEmpty()) continue;
+            if (!value || !value.isTruthy()) continue;
   
             if (!firstProp) {
               el.createSpan({

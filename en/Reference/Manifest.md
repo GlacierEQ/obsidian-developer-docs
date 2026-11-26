@@ -21,11 +21,11 @@ The following properties are available for both plugins and themes.
 
 The following properties are only available to plugins.
 
-| Property        | Type      | Required | Description                                             |
-| --------------- | --------- | -------- | ------------------------------------------------------- |
-| `description`   | `string`  | **Yes**  | A description of your plugin.                           |
-| `id`            | `string`  | **Yes**  | The ID of your plugin. The ID can't contain `obsidian`. |
-| `isDesktopOnly` | `boolean` | **Yes**  | Whether your plugin uses NodeJS or Electron APIs.       |
+| Property        | Type      | Required | Description                                                                                                                            |
+| --------------- | --------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------|
+| `description`   | `string`  | **Yes**  | A description of your plugin.                                                                                                          |
+| `id`            | `string`  | **Yes**  | The ID of your plugin. The ID must contain only lowercase letters and hyphens, can't end with `plugin`, and can't contain `obsidian`.  |
+| `isDesktopOnly` | `boolean` | **Yes**  | Whether the plugin can only be used on the desktop app, for example because it uses NodeJS or Electron APIs.                          |
 
 > [!note]
 > For local development, the `id` should match the plugin's folder name; otherwise some methods, such as `onExternalSettingsChange`, won't be called.
@@ -37,11 +37,12 @@ The following properties are only available to plugins.
 Theme names cannot be changed once the theme has been submitted to the community directory. You can update your plugin names in the community directory by changing the `name` field in `manifest.json`. If the new name is invalid, the directory delists the plugin until you resolve the problem.
 
 - Make your name short and descriptive.
-- Prefer English names and use [Basic Latin](https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block)) characters only. No punctuation (except hyphens), emoji, or special characters are allowed. In the future we will offer options for localization.
+- Prefer English names and use [Basic Latin](https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block)) characters only. No punctuation (except hyphens, plus sign, and parenthesis), emoji, or special characters are allowed. In the future we will offer options for localization.
 - Do not use the name of Obsidian core plugins and features. For example, "Live Preview" or "Bases" are not acceptable plugin names on their own.
 - Do not include the word "Obsidian" or variations like "Obsi-" and "-sidian".
 - Every plugin and theme must have a unique name.
 - Do not use profanity, explicit language, or other terms that would be prohibited by our [Code of Conduct](https://obsidian.md/help/community-code-of-conduct).
+- Themes may not contain the word "Theme", and plugins may not contain the word "Plugin".
 
 ## fundingUrl
 
